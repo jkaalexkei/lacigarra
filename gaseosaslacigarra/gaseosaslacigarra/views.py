@@ -28,7 +28,7 @@ def login_view(request):
             messages.success(request,'Usuario autenticado exitosamente')
             return redirect ('index')
         else:
-            messages.danger(request,'Error en el proceso de autenticación')
+            messages.error(request,'Error en el proceso de autenticación')
                 
     return render(request,'usuarios/login.html',{
         
