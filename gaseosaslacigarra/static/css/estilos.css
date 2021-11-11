@@ -1,0 +1,27 @@
+#principal{
+    background-image: url(../img/fondocigarra.jpg);
+    /* background-repeat: no-repeat; */
+    background-size: 100% 100%;
+    /* background-position:center center; */
+    background-attachment: fixed;
+    
+
+ 
+    
+}
+
+#navegacion{
+    background-color: #e3deeb75;
+}
+
+
+.bg-fondo{
+    background-color: #e3deeb75;
+    box-shadow: 1px 1px 10px 1px #000;
+   
+}
+
+#boton:hover{
+    background-color: #753ebe6e !important;
+    
+}

@@ -5,7 +5,7 @@ from django.contrib.auth import login#permite crear sesiones
 from django.contrib import messages #modulo para trabajar con mensajes
 
 def index(request):
-    return render(request,'index.html',{
+    return render(request,'plantilla.html',{
         'titulo':'Listado de articulos',
         'productos':[
             {'nombre':'gaseosa','precio':1500,'stock':True},
