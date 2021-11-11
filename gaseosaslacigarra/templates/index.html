@@ -12,10 +12,34 @@
     <title>Hello, world!</title>
   </head>
   <body>
-    <div class="container">
+    <div class="container principal">
       <div class="row">
         <div class="col-12">
           <img src="{% static 'img/encabezado.jpg' %}" alt="la cigarra">
+          <div class="container">
+            
+          
+          
+              {% if messages %}
+    
+                {% for mensaje in messages  %}
+                      
+                    {% if mensaje.tags == 'success' %}
+                        <div class="alert alert-success">{{mensaje}}</div>
+                    {% else %}
+                        <div class="alert alert-danger">{{mensaje}}</div>
+                    {% endif %}
+                  
+                {% endfor %}
+                
+              {% endif %}
+                
+                
+                
+                
+              
+           
+          </div>
          
           <h1 class="text-center text-uppercase">Productos</h1>
 
