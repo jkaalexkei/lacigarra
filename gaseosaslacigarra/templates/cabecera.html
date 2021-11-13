@@ -1,37 +1,53 @@
 {% load static %}
-<div class="row">
-    <div class="col-3">
-      <img src="{% static 'img/lacigarra.png' %}" class="img img-fluid rounded w-75 mt-2" alt="...">
+<div class="container-fluid">
+
+  {% if messages %}
+
+  {% for mensajes in  messages %}
+  <div class="alert {% if mensajes.tags == 'success' %}alert-success{% else %}alert-danger{% endif %}">
+    {{ mensajes }}
+  </div>
+  {% endfor %}
+
+  {% endif %}
+
+  <div class="row">
+    <div class="col-3 text-center">
+      <img src="{% static 'img/lacigarra.png' %}" class="img img-fluid rounded w-75 mt-2 border" alt="...">
     </div>
     <div class="col-9">
-        <nav id="navegacion" class="navbar navbar-expand-lg navbar-light mt-2 rounded rounded-1">
-            <div class="container-fluid">
-              <!-- <a class="navbar-brand" href="#">Navbar w/ text</a> -->
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarText">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link text-white text-decoration-none fw-bolder" aria-current="page" href="#">Inicio</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link text-white text-decoration-none fw-bolder" href="#">Productos</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link text-white text-decoration-none fw-bolder" href="#">Contactos</a>
-                  </li>
-                </ul>
-                <span class="nav-item">
-                    <img src="{% static 'img/icono_user.png' %}" class="img img-fluid rounded-circle" alt="..." width="40" height="40"> 
-                  <a class="text-white text-decoration-none fw-bolder" href="">Login</a>
-                </span>
-              </div>
-            </div>
-          </nav>
+      <nav id="navegacion" class="navbar navbar-expand-lg navbar-light mt-2 rounded rounded-1">
+        <div class="container-fluid">
+          <!-- <a class="navbar-brand" href="#">Navbar w/ text</a> -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link text-white text-decoration-none fw-bolder" aria-current="page" href="#">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white text-decoration-none fw-bolder" href="#">Productos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white text-decoration-none fw-bolder" href="#">Contactos</a>
+              </li>
+            </ul>
+            <span class="nav-item">
+              <!-- <img src="{% static 'img/icono_user.png' %}" class="img img-fluid rounded-circle" alt="..." width="40" height="40">  -->
+
+              <a class="text-white text-decoration-none fw-bolder" href=""><i class="far fa-user"></i> Login</a>
+
+            </span>
+          </div>
+        </div>
+      </nav>
     </div>
+  </div>
 </div>
- 
+
 
 
 
